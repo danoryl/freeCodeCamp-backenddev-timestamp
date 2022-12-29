@@ -20,7 +20,7 @@ app.get("/", function (req, res) {
 
 app.get("/api/:date", function (req, res) {
   let date = req.params.date;
-  if (date.match(/\d{5,}/)){
+  if (date.match(/^\d+$/)){
     date = +date;
   }
 
