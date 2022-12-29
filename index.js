@@ -18,7 +18,6 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-// check if a input is inserted. If so, transform into date and timestamp if valid, or present an error otherwise.
 app.get("/api/:date", function (req, res) {
   let date = req.params.date;
   if (!date.includes("-")){
